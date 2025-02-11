@@ -13,16 +13,16 @@ function handleInstalled(details) {
 }
 
 function handleMenuButton(info, tab) {
-    console.log("info, tab:")
-    console.dir(info, tab);
-    console.log("target element id: ", info.targetElementId);
+    // console.log("info, tab:")
+    // console.dir(info, tab);
+    // console.log("target element id: ", info.targetElementId);
     
     if (info.selectionText) { // check if targetElementId is not undefined
         browser.tabs.sendMessage(tab.id, {messageType: "selectedText", selectedText: info.selectionText});
     } else if (info.targetElementId >= 0) {
         browser.tabs.sendMessage(tab.id, {messageType: "findTextByElement", targetElementId: info.targetElementId, bubbling: true});
     } else {
-        browser.tabs.sendMessage(tab.id, {messageType: "error", errorInfo: "no valid target (inferred by setup script)"})
+        browser.tabs.sendMessage(tab.id, {messageType: "error", errorInfo: "no valid target (inferred by setup script)"});
     }
 }
 
