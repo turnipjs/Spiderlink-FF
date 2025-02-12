@@ -1,1 +1,3 @@
-- [ ] Make icon svg https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons#svg
+- [x] Make icon svg https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons#svg
+- [ ] Make a build process
+- [ ] Choose a license for 1.0 release
